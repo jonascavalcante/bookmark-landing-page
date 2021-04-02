@@ -1,0 +1,122 @@
+#features{
+    margin-top: 95px;
+    text-align: center;
+
+    h2{
+        margin-bottom: 36px;
+    }
+
+    p{
+        margin: 0 auto 45px auto;
+        max-width: 534px;
+    }
+
+    .buttons{
+        width: min-content;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $gray;
+
+        button{
+            width: 244px;
+            height: 80px;
+            border: transparent;
+            border-bottom: 4px solid transparent;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:hover{
+                border-bottom: 4px solid $red;
+            }
+        }
+    }
+
+    .box{
+        max-width: 1260px;
+        margin: 0 auto;
+        padding: 66px 0;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        .image{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 15px 0 80px;
+            
+            .image-content{
+                display: block;
+                width: 100%;
+                position: relative;
+    
+                .image-box{
+                    position: relative;
+                    height: 0;
+                    padding: 0 0 64.55%;
+                    border-radius: 20px;
+                    
+                    img{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+    
+                &::after{
+                    display: block;
+                    content: '';
+    
+                    width: 45vw;
+                    height: 100%;
+    
+                    position: absolute;
+                    top: 32.67%;
+                    right: 16.82%;
+    
+                    border-bottom-right-radius: 200px;
+                    z-index: -1;
+                    background-color: $blue;
+                }
+            }
+        }
+    
+        .texts{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            padding: 70px 90px 56px 110px;
+            text-align: left;
+    
+            h1{
+                font-size: 35px;
+                font-weight: 500;
+            }
+    
+            p{
+                line-height: 25px;
+                margin: 0;
+            }
+            
+            button{
+                width: 166px;
+                height: 48px;
+                margin-right: 16px;
+                font-weight: 500;
+                border-radius: 5px;
+                border: transparent;
+                cursor: pointer;
+    
+                &#chrome-button{
+                    color: $white;
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+}

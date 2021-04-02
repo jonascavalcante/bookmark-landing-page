@@ -1,0 +1,38 @@
+header{
+    max-width: 1260px;
+    margin: auto;
+    padding: 48px 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 48px;
+        align-items: center;
+
+        li{
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            #loginButton{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 112px;
+                height: 40px;
+                border-radius: 5px;
+                color: $white;
+                background-color: $red;
+            }
+        }
+    }
+}

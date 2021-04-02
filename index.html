@@ -8,78 +8,161 @@
   
   <title>Frontend Mentor | Bookmark landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
 
-  Features
-  Pricing
-  Contact
-  Login
+  <header>
 
-  A Simple Bookmark Manager
+    <div class="logo">
+      <img src="./images/logo-bookmark.svg" alt="">
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="">Features</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a id="loginButton" href="">Login</a></li>
+      </ul>
+    </nav>
 
-  A clean and simple interface to organize your favourite websites. Open a new 
-  browser tab and see your sites load instantly. Try it for free.
+  </header>
 
-  Get it on Chrome
-  Get it on Firefox
+  <main>
 
-  Features
+    <div class="texts">
 
-  Our aim is to make it quick and easy for you to access your favourite websites. 
-  Your bookmarks sync between your devices so you can access them on the go.
+      <h1>A Simple Bookmark Manager</h1>
 
-  Simple Bookmarking
-  Speedy Searching
-  Easy Sharing
+      <p>
+        A clean and simple interface to organize your favourite websites. Open a new 
+        browser tab and see your sites load instantly. Try it for free.
+      </p>
 
-  Bookmark in one click
+      <div class="buttons">
+        <button id="chrome-button">Get it on Chrome</button>
+        <button>Get it on Firefox</button>
+      </div>
 
-  Organize your bookmarks however you like. Our simple drag-and-drop interface 
-  gives you complete control over how you manage your favourite sites.
+    </div>
 
-  More Info
+    <div class="image">
+      <div class="image-content">
+        <div class="image-box">
+          <img src="./images/illustration-features-tab-1.svg" alt="">
+        </div>
+      </div>
+    </div>
 
-  Intelligent search
+  </main>
 
-  Our powerful search feature will help you find saved sites in no time at all. 
-  No need to trawl through all of your bookmarks.
+  <section id="features">
+    
+    <h2>Features</h2>
 
-  More Info
+    <p>
+      Our aim is to make it quick and easy for you to access your favourite websites. 
+      Your bookmarks sync between your devices so you can access them on the go.
+    </p>
 
-  Share your bookmarks
-
-  Easily share your bookmarks and collections with others. Create a shareable 
-  link that you can send at the click of a button.
-
-  More Info
-
-  Download the extension
-
-  We’ve got more browsers in the pipeline. Please do let us know if you’ve 
-  got a favourite you’d like us to prioritize.
-
-  Add to Chrome
-  Minimum version 62
-  Add & Install Extension
-
-  Add to Firefox
-  Minimum version 55
-  Add & Install Extension
-
-  Add to Opera
-  Minimum version 46
-  Add & Install Extension
-
-  Frequently Asked Questions
+    <div class="buttons">
+      <button>Simple Bookmarking</button>
+      <button>Speedy Searching</button>
+      <button>Easy Sharing</button>
+    </div>
+    
+    <div class="box">
   
-  Here are some of our FAQs. If you have any other questions you’d like 
+      <div class="image">
+        <div class="image-content">
+          <div class="image-box">
+            <img src="./images/illustration-features-tab-1.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="texts">
+  
+        <h1>Bookmark in one click</h1>
+  
+        <p>
+          Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+        </p>
+        
+        <button id="chrome-button">More Info</button>
+  
+      </div>
+  
+    </div>
+
+  </section>
+  
+  <!--   Intelligent search
+  
+    Our powerful search feature will help you find saved sites in no time at all. 
+    No need to trawl through all of your bookmarks.
+  
+    More Info
+  
+    Share your bookmarks
+  
+    Easily share your bookmarks and collections with others. Create a shareable 
+    link that you can send at the click of a button.
+  
+    More Info -->
+
+  <section id="extension">
+    
+    <h2>Download the extension</h2>
+
+    <p>
+      We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+  got a favourite you’d like us to prioritize.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="" alt="">
+        <h3>Add to Chrome</h3>
+        <p>Minimum version 62</p>
+        <button>Add & Install Extension</button>
+      </div>
+      
+        <div class="card">
+        <img src="" alt="">
+        <h3>Add to Firefox</h3>
+        <p>Minimum version 55</p>
+        <button>Add & Install Extension</button>
+      </div>
+      
+      <div class="card">
+        <img src="" alt="">
+        <h3>Add to Opera</h3>
+        <p>Minimum version 46</p>
+        <button>Add & Install Extension</button>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <section id="askedQuestions">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <p>
+      Here are some of our FAQs. If you have any other questions you’d like 
   answered please feel free to email us.
+    </p>
+    
+  </section>
+
+
+  
+  
 
   <!-- Question 1 -->
   What is Bookmark?
@@ -127,7 +210,7 @@
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.linkedin.com/in/jonascavalcante/" target="_blank">Jonas Cavalcante</a>.
     </p>
   </footer>
 </body>

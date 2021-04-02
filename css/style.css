@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+*, *:before, *:after {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  /* 10px */
+}
+
+body {
+  font-size: 1.6rem;
+  /* 1.6rem * 10 = 16px */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@media (max-width: 720px) {
+  :root {
+    font-size: 50%;
+    /* Diminuir fonte no mobile */
+  }
+}
+
+header {
+  max-width: 1260px;
+  margin: auto;
+  padding: 48px 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  gap: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header ul li #loginButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 112px;
+  height: 40px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #fa5757;
+}
+
+main {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 66px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 102px;
+}
+
+main .texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 78px 0 22px 75px;
+}
+
+main .texts h1 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+main .texts p {
+  line-height: 25px;
+}
+
+main .texts button {
+  width: 166px;
+  height: 48px;
+  margin-right: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: transparent;
+  cursor: pointer;
+}
+
+main .texts button#chrome-button {
+  color: #ffffff;
+  background-color: #5368df;
+}
+
+main .image {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .image .image-content {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+main .image .image-content .image-box {
+  position: relative;
+  height: 0;
+  background-color: #252526;
+  padding: 0 0 64.55%;
+  border-radius: 20px;
+}
+
+main .image .image-content .image-box img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 20px solid #252526;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 20px 30px rgba(37, 37, 38, 0.5);
+          box-shadow: 0 20px 30px rgba(37, 37, 38, 0.5);
+}
+
+main .image .image-content::after {
+  display: block;
+  content: '';
+  width: 40vw;
+  height: 100%;
+  position: absolute;
+  top: 32.67%;
+  left: 16.82%;
+  border-bottom-left-radius: 200px;
+  z-index: -1;
+  background-color: #5368df;
+}
+
+#features {
+  margin-top: 95px;
+  text-align: center;
+}
+
+#features h2 {
+  margin-bottom: 36px;
+}
+
+#features p {
+  margin: 0 auto 45px auto;
+  max-width: 534px;
+}
+
+#features .buttons {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #cccccc;
+}
+
+#features .buttons button {
+  width: 244px;
+  height: 80px;
+  border: transparent;
+  border-bottom: 4px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#features .buttons button:hover {
+  border-bottom: 4px solid #fa5757;
+}
+
+#features .box {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 66px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#features .box .image {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px 0 80px;
+}
+
+#features .box .image .image-content {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+#features .box .image .image-content .image-box {
+  position: relative;
+  height: 0;
+  padding: 0 0 64.55%;
+  border-radius: 20px;
+}
+
+#features .box .image .image-content .image-box img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#features .box .image .image-content::after {
+  display: block;
+  content: '';
+  width: 45vw;
+  height: 100%;
+  position: absolute;
+  top: 32.67%;
+  right: 16.82%;
+  border-bottom-right-radius: 200px;
+  z-index: -1;
+  background-color: #5368df;
+}
+
+#features .box .texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 70px 90px 56px 110px;
+  text-align: left;
+}
+
+#features .box .texts h1 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+#features .box .texts p {
+  line-height: 25px;
+  margin: 0;
+}
+
+#features .box .texts button {
+  width: 166px;
+  height: 48px;
+  margin-right: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: transparent;
+  cursor: pointer;
+}
+
+#features .box .texts button#chrome-button {
+  color: #ffffff;
+  background-color: #5368df;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.border {
+  border: 2px solid green;
+}
