@@ -3,6 +3,7 @@
     text-align: center;
 
     h2{
+        font-weight: 500;
         margin-bottom: 36px;
         color: $letter;
     }
@@ -14,13 +15,13 @@
 
     .cards{
         margin: auto;
-        width: min-content;
+        max-width: 912px;
         display: grid;
         grid-template-columns: repeat(3, auto);
         gap: 32px;
 
         .card{
-            width: 283px;
+            width: 100%;
             height: min-content;
             padding: 26px;
             border-radius: 10px;

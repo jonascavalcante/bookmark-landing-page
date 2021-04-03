@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
 $blue: #5368df;
+$darkBlue: #242946;
 $red: #fa5757;
 $white: #ffffff;
 $gray: #cccccc;
@@ -31,7 +32,6 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    padding: 0 90px;
 }
 
 @media (max-width: 720px){

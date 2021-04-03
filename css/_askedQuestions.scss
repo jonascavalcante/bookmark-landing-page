@@ -3,6 +3,7 @@
     text-align: center;
  
     h2{
+        font-weight: 500;
         margin-bottom: 36px;
         color: $letter;
     }
@@ -29,10 +30,17 @@
             color: $letter;
             cursor: pointer;
         }
+
+        p{
+            display: none;
+            text-align: left;
+            margin: 0 0 10px 0;
+        }
     }
 
     #moreInfo{
         margin-top: 54px;
+        margin-bottom: 150px;
         width: 114px;
         height: 48px;
         font-weight: 500;
@@ -40,5 +48,6 @@
         border: transparent;
         color: $white;
         background-color: $blue;
+        cursor: pointer;
     }
 }
