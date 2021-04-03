@@ -21,10 +21,10 @@
     
     <nav>
       <ul>
-        <li><a href="">Features</a></li>
-        <li><a href="">Pricing</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a id="loginButton" href="">Login</a></li>
+        <li><a href="#feature">Features</a></li>
+        <li><a href="#Pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a id="loginButton" href="#login">Login</a></li>
       </ul>
     </nav>
 
@@ -42,8 +42,8 @@
       </p>
 
       <div class="buttons">
-        <button id="chrome-button">Get it on Chrome</button>
-        <button>Get it on Firefox</button>
+        <button id="chromeButton">Get it on Chrome</button>
+        <button id="firefoxButton">Get it on Firefox</button>
       </div>
 
     </div>
@@ -68,7 +68,7 @@
     </p>
 
     <div class="buttons">
-      <button>Simple Bookmarking</button>
+      <button class="active">Simple Bookmarking</button>
       <button>Speedy Searching</button>
       <button>Easy Sharing</button>
     </div>
@@ -91,7 +91,7 @@
           Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
         </p>
         
-        <button id="chrome-button">More Info</button>
+        <button id="button1">More Info</button>
   
       </div>
   
@@ -124,22 +124,22 @@
 
     <div class="cards">
 
-      <div class="card">
-        <img src="" alt="">
+      <div class="card card1">
+        <img src="./images/logo-chrome.svg" alt="">
         <h3>Add to Chrome</h3>
         <p>Minimum version 62</p>
         <button>Add & Install Extension</button>
       </div>
       
-        <div class="card">
-        <img src="" alt="">
+      <div class="card card2">
+        <img src="./images/logo-firefox.svg" alt="">
         <h3>Add to Firefox</h3>
         <p>Minimum version 55</p>
         <button>Add & Install Extension</button>
       </div>
       
-      <div class="card">
-        <img src="" alt="">
+      <div class="card card3">
+        <img src="./images/logo-opera.svg" alt="">
         <h3>Add to Opera</h3>
         <p>Minimum version 46</p>
         <button>Add & Install Extension</button>
@@ -157,22 +157,24 @@
       Here are some of our FAQs. If you have any other questions you’d like 
   answered please feel free to email us.
     </p>
+
+    <div class="questions">
+      <button>What is Bookmark?</button>
+      <button>How can I request a new browser?</button>
+      <button>Is there a mobile app?</button>
+      <button>What about other Chromium browsers?</button>
+    </div>
     
+    <button id="moreInfo">More Info</button>
+
   </section>
 
 
-  
-  
-
-  <!-- Question 1 -->
-  What is Bookmark?
 
   <!-- Answer 1 -->
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
   justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-
-  <!-- Question 2 -->
-  How can I request a new browser?
+  
 
   <!-- Answer 2 -->
   Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
@@ -180,22 +182,18 @@
   ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
   Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
 
-  <!-- Question 3 -->
-  Is there a mobile app?
 
   <!-- Answer 3 -->
   Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
   urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
   sollicitudin ex et ultricies bibendum.
 
-  <!-- Question 4 -->
-  What about other Chromium browsers?
 
   <!-- Answer 4 -->
   Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
   vitae neque eget nisl gravida pellentesque non ut velit.
 
-  More Info
+  
 
   35,000+ already joined
 

@@ -15,12 +15,16 @@ main{
         padding: 78px 0 22px 75px;
 
         h1{
-            font-size: 35px;
+            max-width: 435px;
+            font-size: 3.5rem;
             font-weight: 500;
+            color: $letter;
         }
-
+        
         p{
-            line-height: 25px
+            max-width: 485px;
+            line-height: 25px;
+            color: $letterP;
         }
         
         button{
@@ -31,10 +35,15 @@ main{
             border-radius: 5px;
             border: transparent;
             cursor: pointer;
-
-            &#chrome-button{
+            
+            &#chromeButton{
                 color: $white;
                 background-color: $blue;
+            }
+            &#firefoxButton{
+                color: $letterB;
+                background-color: $backB;
+                box-shadow: 0 2px 5px $gray;
             }
         }
     }

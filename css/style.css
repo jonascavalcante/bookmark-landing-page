@@ -19,6 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  padding: 0 90px;
 }
 
 @media (max-width: 720px) {
@@ -61,9 +62,10 @@ header ul li {
 header ul li a {
   text-decoration: none;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.4rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: #242946;
 }
 
 header ul li #loginButton {
@@ -109,12 +111,16 @@ main .texts {
 }
 
 main .texts h1 {
-  font-size: 35px;
+  max-width: 435px;
+  font-size: 3.5rem;
   font-weight: 500;
+  color: #242946;
 }
 
 main .texts p {
+  max-width: 485px;
   line-height: 25px;
+  color: #8B8C91;
 }
 
 main .texts button {
@@ -127,9 +133,16 @@ main .texts button {
   cursor: pointer;
 }
 
-main .texts button#chrome-button {
+main .texts button#chromeButton {
   color: #ffffff;
   background-color: #5368df;
+}
+
+main .texts button#firefoxButton {
+  color: #61616D;
+  background-color: #F7F7F7;
+  -webkit-box-shadow: 0 2px 5px #cccccc;
+          box-shadow: 0 2px 5px #cccccc;
 }
 
 main .image {
@@ -165,8 +178,8 @@ main .image .image-content .image-box img {
   height: 100%;
   border: 20px solid #252526;
   border-radius: 20px;
-  -webkit-box-shadow: 0 20px 30px rgba(37, 37, 38, 0.5);
-          box-shadow: 0 20px 30px rgba(37, 37, 38, 0.5);
+  -webkit-box-shadow: 0 20px 30px #25252680;
+          box-shadow: 0 20px 30px #25252680;
 }
 
 main .image .image-content::after {
@@ -189,11 +202,13 @@ main .image .image-content::after {
 
 #features h2 {
   margin-bottom: 36px;
+  color: #242946;
 }
 
 #features p {
   margin: 0 auto 45px auto;
-  max-width: 534px;
+  max-width: 528px;
+  color: #8B8C91;
 }
 
 #features .buttons {
@@ -217,9 +232,12 @@ main .image .image-content::after {
   border-bottom: 4px solid transparent;
   background-color: transparent;
   cursor: pointer;
+  font-size: 1.6rem;
+  color: #8B8C91;
 }
 
-#features .buttons button:hover {
+#features .buttons button.active {
+  color: #242946;
   border-bottom: 4px solid #fa5757;
 }
 
@@ -295,13 +313,15 @@ main .image .image-content::after {
 }
 
 #features .box .texts h1 {
-  font-size: 35px;
+  font-size: 3.5rem;
   font-weight: 500;
+  color: #242946;
 }
 
 #features .box .texts p {
   line-height: 25px;
   margin: 0;
+  color: #8B8C91;
 }
 
 #features .box .texts button {
@@ -314,7 +334,132 @@ main .image .image-content::after {
   cursor: pointer;
 }
 
-#features .box .texts button#chrome-button {
+#features .box .texts button#button1 {
+  color: #ffffff;
+  background-color: #5368df;
+}
+
+#extension {
+  margin-top: 163px;
+  text-align: center;
+}
+
+#extension h2 {
+  margin-bottom: 36px;
+  color: #242946;
+}
+
+#extension p {
+  margin: 0 auto 45px auto;
+  max-width: 528px;
+  color: #8B8C91;
+}
+
+#extension .cards {
+  margin: auto;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  gap: 32px;
+}
+
+#extension .cards .card {
+  width: 283px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 26px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 10px #cccccc80;
+          box-shadow: 0 10px 10px #cccccc80;
+}
+
+#extension .cards .card.card2 {
+  margin-top: 40px;
+}
+
+#extension .cards .card.card3 {
+  margin-top: 80px;
+}
+
+#extension .cards .card img {
+  max-width: 102px;
+}
+
+#extension .cards .card h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 37px auto 19px auto;
+  color: #242946;
+}
+
+#extension .cards .card p {
+  font-size: 1.4rem;
+  color: #8B8C91;
+}
+
+#extension .cards .card button {
+  width: 100%;
+  height: 48px;
+  border: transparent;
+  font-weight: 500;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #5368df;
+  cursor: pointer;
+}
+
+#askedQuestions {
+  margin-top: 163px;
+  text-align: center;
+}
+
+#askedQuestions h2 {
+  margin-bottom: 36px;
+  color: #242946;
+}
+
+#askedQuestions p {
+  margin: 0 auto 45px auto;
+  max-width: 528px;
+  color: #8B8C91;
+}
+
+#askedQuestions .questions {
+  margin: auto;
+  max-width: 542px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid #cccccc;
+}
+
+#askedQuestions .questions button {
+  text-align: left;
+  font-size: 1.6rem;
+  height: 65px;
+  background-color: transparent;
+  border: transparent;
+  border-top: 1px solid #cccccc;
+  color: #242946;
+  cursor: pointer;
+}
+
+#askedQuestions #moreInfo {
+  margin-top: 54px;
+  width: 114px;
+  height: 48px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: transparent;
   color: #ffffff;
   background-color: #5368df;
 }

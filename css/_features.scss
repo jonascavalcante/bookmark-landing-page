@@ -4,11 +4,13 @@
 
     h2{
         margin-bottom: 36px;
+        color: $letter;
     }
 
     p{
         margin: 0 auto 45px auto;
-        max-width: 534px;
+        max-width: 528px;
+        color: $letterP;
     }
 
     .buttons{
@@ -25,8 +27,11 @@
             border-bottom: 4px solid transparent;
             background-color: transparent;
             cursor: pointer;
+            font-size: 1.6rem;
+            color: $letterP;
 
-            &:hover{
+            &.active{
+                color: $letter;
                 border-bottom: 4px solid $red;
             }
         }
@@ -94,13 +99,15 @@
             text-align: left;
     
             h1{
-                font-size: 35px;
+                font-size: 3.5rem;
                 font-weight: 500;
+                color: $letter;
             }
     
             p{
                 line-height: 25px;
                 margin: 0;
+                color: $letterP;
             }
             
             button{
@@ -112,7 +119,7 @@
                 border: transparent;
                 cursor: pointer;
     
-                &#chrome-button{
+                &#button1{
                     color: $white;
                     background-color: $blue;
                 }

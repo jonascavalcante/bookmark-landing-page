@@ -1,0 +1,44 @@
+#askedQuestions{
+    margin-top: 163px;
+    text-align: center;
+ 
+    h2{
+        margin-bottom: 36px;
+        color: $letter;
+    }
+    p{
+        margin: 0 auto 45px auto;
+        max-width: 528px;
+        color: $letterP;
+    }
+
+    .questions{
+        margin: auto;
+        max-width: 542px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $gray;
+
+        button{
+            text-align: left;
+            font-size: 1.6rem;
+            height: 65px;
+            background-color: transparent;
+            border: transparent;
+            border-top: 1px solid $gray;
+            color: $letter;
+            cursor: pointer;
+        }
+    }
+
+    #moreInfo{
+        margin-top: 54px;
+        width: 114px;
+        height: 48px;
+        font-weight: 500;
+        border-radius: 5px;
+        border: transparent;
+        color: $white;
+        background-color: $blue;
+    }
+}

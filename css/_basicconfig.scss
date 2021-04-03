@@ -4,8 +4,15 @@ $blue: #5368df;
 $red: #fa5757;
 $white: #ffffff;
 $gray: #cccccc;
+
+$letter: #242946;
+$letterP: #8B8C91;
+$letterB: #61616D;
+$backB: #F7F7F7;
+$backC: #cccccc80;
+
 $backIllustration1: #252526;
-$backIllustration2: rgba(37, 37, 38, 0.5);
+$backIllustration2: #25252680;
 
 *, *:before, *:after{
     font-family: 'Rubik', sans-serif;
@@ -24,6 +31,7 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    padding: 0 90px;
 }
 
 @media (max-width: 720px){
