@@ -1,0 +1,58 @@
+footer{
+    background-color: $veryDarkBlue;
+
+    .box{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: auto;
+        padding: 30px 165px;
+
+        .left-box{
+            display: flex;
+            align-items: center;
+            
+            ul{
+                display: flex;
+                align-items: center;
+                
+                li{
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+    
+                    a{
+                        letter-spacing: 1px;
+                        font-size: 1.4rem;
+                        text-decoration: none;
+                        margin-left: 48px;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .socials{
+            display: flex;
+
+            a:first-child{
+                margin-right: 28px;
+            }
+        }
+    }
+
+    .attribution{
+        display: block;
+        max-width: 100%;
+        margin: 0;
+        padding: 10px 165px;
+        font-size: 1.1rem;
+        text-align: center;
+        color: $grayishBlue;
+        background-color: $borderImage;
+
+        a{
+            color: $grayLight;
+        }
+    }
+}

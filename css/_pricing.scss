@@ -1,0 +1,61 @@
+#pricing{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 65px 165px 95px 165px;
+    text-align: center;
+
+    p{
+        margin: 35px auto;
+    }
+
+    .cards{
+        max-width: 908px;
+        margin: 40px auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 34px;
+        
+        .card{
+            width: 100%;
+            max-width: 280px;
+            height: min-content;
+            box-shadow: 0;
+            box-shadow: 0 10px 10px $shadowCard;
+            border-radius: 10px;
+
+            .logo-extensions{
+                max-width: 100px;
+                width: 100%;
+                margin: 48px auto 35px auto;
+            }
+
+            h3{
+                font-size: 2rem;
+                font-weight: 500;
+                color: $veryDarkBlue;
+            }
+
+            p{
+                font-size: 1.4rem;
+                margin: 18px auto 40px auto;
+            }
+
+            .bg-dots{
+                width: 100%;
+            }
+
+            button{
+                width: 100%;
+                max-width: calc(100% - 48px);
+                margin: 24px 24px;
+            }
+
+            &.card2{
+                margin-top: 40px;
+            }
+            &.card3{
+                margin-top: 80px;
+            }
+        }
+    }
+}

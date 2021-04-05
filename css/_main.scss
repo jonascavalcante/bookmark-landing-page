@@ -1,97 +1,89 @@
 main{
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 66px 90px;
+    margin: 68px auto 195px auto;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 102px;
-
-    .texts{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        padding: 78px 0 22px 75px;
-
-        h1{
-            max-width: 435px;
-            font-size: 3.5rem;
-            font-weight: 500;
-            color: $letter;
-        }
+    .container{
+        max-width: 1440px;
+        margin: auto;
+        padding: 0 90px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 104px;
         
-        p{
-            max-width: 485px;
-            line-height: 25px;
-            color: $letterP;
-        }
-        
-        button{
-            width: 166px;
-            height: 48px;
-            margin-right: 16px;
-            font-weight: 500;
-            border-radius: 5px;
-            border: transparent;
-            cursor: pointer;
-            
-            &#chromeButton{
-                color: $white;
-                background-color: $blue;
-            }
-            &#firefoxButton{
-                color: $letterB;
-                background-color: $backB;
-                box-shadow: 0 2px 5px $gray;
-            }
-        }
-    }
+        .texts{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 75px 0 22px 75px;
     
-    .image{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        
-        .image-content{
-            display: block;
-            width: 100%;
-            position: relative;
+            h1{
+                max-width: 445px;
+                font-weight: 500;
+                color: $veryDarkBlue;
+            }
+    
+            p{
+                margin: 28px 0 35px 0;
+                color: $grayishBlue;
+            }
+            button{
+                height: 48px;
 
-            .image-box{
-                position: relative;
-                height: 0;
-                background-color: $backIllustration1;
-                padding: 0 0 64.55%;
-                border-radius: 20px;
-                
-                img{
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    border: 20px solid $backIllustration1;
-                    border-radius: 20px;
-                    box-shadow: 0 20px 30px $backIllustration2;
+                &.gray {
+                    box-shadow: 0 2px 5px $shadowButton;
                 }
             }
+    
+            button:first-child{
+                margin-right: 15px;
+            }
+        }
 
-            &::after{
+        .image{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            
+            .image-content{
+                width: 100%;
                 display: block;
-                content: '';
+                position: relative;
 
-                width: 40vw;
-                height: 100%;
+                .image-box{
+                    position: relative;
+                    height: 0;
+                    padding: 0 0 64.55%;
+        
+                    img{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+    
+                        border-radius: 20px;
+                        border: 20px solid $borderImage;
+                        background-color: $borderImage;
+                        box-shadow: 0 20px 30px $shadowImage;
+                    }
+    
+                }
 
-                position: absolute;
-                top: 32.67%;
-                left: 16.82%;
+                &::before{
+                    display: block;
+                    content: "";
+                    
+                    position: absolute;
+                    top: 34.65%;
+                    left: 23.88%;
 
-                border-bottom-left-radius: 200px;
-                z-index: -1;
-                background-color: $blue;
+                    width: 100vw;
+                    height: 91.86%;
+
+                    border-bottom-left-radius: 175px;
+                    
+                    background-color: $blue;
+                }
             }
         }
     }

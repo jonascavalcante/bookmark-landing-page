@@ -1,0 +1,180 @@
+@media screen and (max-width: 1440px){
+
+    header{
+        //padding: 48px 165px;
+        padding: 3.33% 11.458%;
+    }
+
+    main{
+        //margin: 68px auto 195px auto;
+        margin: 4.72% auto 13.542% auto;
+
+        .container{
+            //gap: 104px;
+            gap: 7.22%;
+
+            .texts{
+                //padding: 75px 0 22px 75px;
+                padding: 12.975% 0 3.806% 12.5%;
+            }
+        }
+    }    
+
+    #features{
+        //margin: 0 auto 185px auto;
+        margin: 0 auto 12.847% auto;
+        //padding: 0 165px;
+        padding: 0 11.458%;
+
+        .container{
+            .texts{
+                //padding: 71px 0 57px 125px;
+                padding: 4.931% 0 3.958% 8.681%;
+            }
+        }
+    }
+
+    #pricing,
+    #askedQuestions{
+        //padding: 65px 165px 95px 165px;
+        padding: 4.514% 11.458% 6.597% 11.458%;
+    }
+
+    #contact{
+        .container{
+            //padding: 0 165px;
+            padding: 0 11.458%;
+        }
+    }
+
+    footer{
+        .box{
+            //padding: 30px 165px;
+            padding: 30px 11.458%;
+        }
+
+        .attribution{
+            //padding: 10px 165px;
+            padding: 10px 11.458%;
+        }
+    }
+}
+
+@media screen and (max-width: 1260px){
+    
+    main{
+        .container{
+            //padding: 0 90px;
+            padding: 0 11.458%;
+            gap: 5%;
+
+            .texts{
+                //padding: 75px 0 22px 75px;
+                padding: 12.975% 0 3.806% 0;
+            }
+            
+            .image .image-content .image-box img{
+                border: 16px solid $borderImage;
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 1075px){
+
+    header{
+        padding: 3.33% 5%;
+    }
+
+    main{
+        .container{  
+            padding: 0 5%;
+        }
+    }    
+
+    #features{
+        padding: 0 5%;
+
+        .container{
+            .texts{
+                //padding: 71px 0 57px 125px;
+                padding: 4.931% 0 3.958% 5%;
+            }
+        }
+    }
+
+    #pricing,
+    #askedQuestions{
+        padding: 4.514% 5% 6.597% 5%;
+    }
+
+    #contact{
+        .container{
+            padding: 0 5%;
+        }
+    }
+
+    footer{
+        .box{
+            padding: 30px 5%;
+        }
+
+        .attribution{
+            padding: 10px 5%;
+        }
+    }
+}
+
+@media screen and (max-width: 925px){
+
+    main{
+        .container{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .texts{
+                margin-top: 100px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .image{
+                max-width: 530px;
+
+                .image-content .image-box img{
+                    border: 14px solid $borderImage;
+                }
+            }
+        }
+    }
+
+    #features{
+
+        .buttons{
+            max-width: 530px;
+        }
+
+        .container{
+            flex-direction: column;
+            align-items: center;
+
+            .image{
+                max-width: 530px;
+                width: 100%;
+            }
+
+            .texts{
+                margin-top: 84px;
+                min-width: 530px;
+                width: 100%;
+                padding: 71px 0 57px 0;
+                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

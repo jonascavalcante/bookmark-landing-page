@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
 $blue: #5368df;
-$darkBlue: #242946;
+$grayLight: #F7F7F7;
+$shadowCard: #cccccc80;
+$grayishBlue: #9194a1;
+$gray: #808080;
+$shadowButton: #cccccc;
+$veryDarkBlue: #252b46;
+$borderImage: #242223;
+$shadowImage: #25252680;
 $red: #fa5757;
 $white: #ffffff;
-$gray: #cccccc;
-
-$letter: #242946;
-$letterP: #8B8C91;
-$letterB: #61616D;
-$backB: #F7F7F7;
-$backC: #cccccc80;
-
-$backIllustration1: #252526;
-$backIllustration2: #25252680;
 
 *, *:before, *:after{
     font-family: 'Rubik', sans-serif;
@@ -28,14 +25,39 @@ $backIllustration2: #25252680;
 }
 
 body{
-    font-size: 1.6rem; /* 1.6rem * 10 = 16px */
+    font-size: 1.8rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
 
-@media (max-width: 720px){
-    :root {
-        font-size: 50%; /* Diminuir fonte no mobile */
+button{
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: transparent;
+    font-weight: 500;
+
+    &.more-info{
+        padding: 0 24px;
     }
+    &.blue{
+        height: 48px;
+        color: $white;
+        background-color: $blue;
+    }
+    &.gray{
+        color: $gray;
+        background-color: $grayLight;
+    }
+}
+
+h2{
+    font-weight: 500;
+    color: $veryDarkBlue;
+}
+
+p{
+    max-width: 530px;
+    margin-top: 35px;
+    color: $grayishBlue;
 }

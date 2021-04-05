@@ -1,69 +1,56 @@
 #features{
-    margin-top: 95px;
+    max-width: 1440px;
+    margin: 0 auto 185px auto;
+    padding: 0 165px;
     text-align: center;
 
-    h2{
-        font-weight: 500;
-        margin-bottom: 36px;
-        color: $letter;
+    p{
+        margin: 35px auto;
     }
 
-    p{
-        margin: 0 auto 45px auto;
-        max-width: 528px;
-        color: $letterP;
-    }
-    
     .buttons{
-        width: 100%;
-        max-width: 730px;
         margin: auto;
+        max-width: 730px;
         display: flex;
-        justify-content: center;
-        border-bottom: 1px solid $gray;
+        border-bottom: 2px solid $grayishBlue;
 
         button{
             width: 100%;
-            height: 80px;
-            border: transparent;
-            border-bottom: 4px solid transparent;
+            height: 72px;
+            color: $grayishBlue;
             background-color: transparent;
-            cursor: pointer;
+            border: none;
+            border-radius: 0;
+            font-weight: 400;
             font-size: 1.6rem;
-            color: $letterP;
 
             &.active{
-                color: $letter;
+                color: $veryDarkBlue;
                 border-bottom: 4px solid $red;
             }
         }
     }
 
-    .box{
-        max-width: 1260px;
-        margin: 0 auto;
-        padding: 66px 0;
-    
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        
+    .container{
+        margin-top: 72px;
+        display: flex;
+        text-align: left;
+
         .image{
-            width: 100%;
+            width: 50%;
             display: flex;
             align-items: center;
-            padding: 0 15px 0 80px;
-            
+
             .image-content{
-                display: block;
                 width: 100%;
+                display: block;
                 position: relative;
-    
+
                 .image-box{
                     position: relative;
                     height: 0;
                     padding: 0 0 64.55%;
-                    border-radius: 20px;
-                    
+        
                     img{
                         position: absolute;
                         top: 0;
@@ -72,59 +59,35 @@
                         width: 100%;
                         height: 100%;
                     }
+    
                 }
-    
-                &::after{
+
+                &::before{
                     display: block;
-                    content: '';
-    
-                    width: 45vw;
-                    height: 100%;
-    
+                    content: "";
+                    
                     position: absolute;
-                    top: 32.67%;
-                    right: 16.82%;
-    
-                    border-bottom-right-radius: 200px;
-                    z-index: -1;
+                    top: 23.99%;
+                    right: 12.13%;
+
+                    width: 100vw;
+                    height: 101.73%;
+
+                    border-bottom-right-radius: 175px;
+                    
                     background-color: $blue;
                 }
             }
         }
-    
+
         .texts{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-    
-            padding: 70px 90px 56px 110px;
-            text-align: left;
-    
-            h1{
-                font-size: 3.5rem;
-                font-weight: 500;
-                color: $letter;
-            }
-    
-            p{
-                line-height: 25px;
-                margin: 0;
-                color: $letterP;
-            }
+            width: 50%;
+            padding: 71px 0 57px 125px;
             
-            button{
-                width: 166px;
-                height: 48px;
-                margin-right: 16px;
+            h3{
                 font-weight: 500;
-                border-radius: 5px;
-                border: transparent;
-                cursor: pointer;
-    
-                &#button1{
-                    color: $white;
-                    background-color: $blue;
-                }
+                font-size: 2.5rem;
+                color: $veryDarkBlue;
             }
         }
     }

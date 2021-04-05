@@ -1,12 +1,13 @@
-@import "basicconfig";
+@import "basicConfig";
 @import "header";
 @import "main";
 @import "features";
-@import "extension";
+@import "pricing";
 @import "askedQuestions";
 @import "contact";
-@import "attribution";
+@import "footer";
+@import "responsive";
 
 .border{
-    border: 2px solid green;;
+    border: 1px solid green;
 }
