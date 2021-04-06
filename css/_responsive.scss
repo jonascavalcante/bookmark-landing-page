@@ -166,15 +166,448 @@
 
             .texts{
                 margin-top: 84px;
-                min-width: 530px;
+                max-width: 530px;
                 width: 100%;
-                padding: 71px 0 57px 0;
+                padding: 71px 0 0 0;
                 text-align: center;
 
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
+        }
+    }
+
+    #askedQuestions{
+        .questions{
+            max-width: 530px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px){
+
+    header{
+        padding: 40px 5%;
+
+        nav{
+            display: none;
+        }
+
+        #menuButton{
+            height: 25px;
+            display: block;
+            background-color: transparent;
+            
+            img{
+                height: 100%;
+            }
+        }
+
+        &.active-menu{
+            display: grid;
+            gap: 40px;
+            grid-template-areas:
+                "logo menuButton"
+                "nav nav"
+                "socials socials"
+            ;       
+            grid-template-columns: 1fr 25px;     
+            grid-template-rows: min-content min-content 1fr;
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+
+            background-color: $backMenu; 
+            
+            .logo{
+                grid-area: logo;
+            }
+
+            #menuButton {
+                grid-area: menuButton;
+            }
+
+            nav{
+                grid-area: nav;
+                display: block;
+                
+                ul{
+                    max-width: 530px;
+                    margin: 0 auto;
+                    flex-direction: column;
+                    border-top: 1px solid $gray;
+                    
+                    li{
+                        width: 100%;
+
+                        a{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 65px;
+                            margin: 0;
+                            color: $white;
+                            border-bottom: 1px solid $gray;
+                        }
+
+                        button{
+                            margin-top: 25px;
+                            width: 100%;
+                            background-color: transparent;
+                            border: 2px solid $white;
+                        }
+                    }
+                }
+            }
+
+            .socials{
+                grid-area: socials;
+                width: min-content;
+                margin: auto;
+                margin-bottom: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+
+                a{
+                    img{
+                        display: block;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    main{
+        margin: 40px auto 104px auto;
+
+        .container{
+            .texts{
+                padding-bottom: 0;
+
+                h1{
+                    max-width: 375px;
+                    font-size: 3.2rem;
+                }
+                p{
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+
+    #features{
+        margin: 0 auto 155px auto;
+
+        p{
+            margin: 24px auto 45px auto;
+        }
+        
+        .buttons{
+            button{
+                height: 58px;
+            }
+        }
+        
+        .container{
+            .texts{
+                padding-bottom: 0;
+            }
+        }
+    }
+    
+    #pricing{
+        .cards{
+            grid-template-columns: 1fr;
+            gap: 40px;
+            
+            .card{
+                margin: 0;
+
+                &.card2{
+                    margin: auto;
+                }
+    
+                &.card3{
+                    margin: 0 0 0 auto;
+                }
+            }
+
+        }
+    }
+
+    #askedQuestions{
+        > button{
+            margin-top: 45px;
+            margin-bottom: 0;
+        }
+    }
+
+    #pricing,
+    #askedQuestions{
+        margin-bottom: 155px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #contact{
+        .container{
+            h2{
+                margin-top: 20px;
+                margin-bottom: 38px;
+            }
+        }
+    }
+
+    footer{
+        .box{
+            padding-top: 38px;
+            padding-bottom: 38px;
+        }
+    }
+}
+
+@media screen and (max-width: 680px){
+
+    footer{
+        .box{
+            flex-direction: column;
+
+            .left-box{
+                flex-direction: column;
+
+                img{
+                    margin-bottom: 40px;
+                }
+
+                nav{
+                    ul{
+                        flex-direction: column;
+                        
+                        li{
+                            a{
+                                margin: 0 0 37px 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .socials{
+                justify-content: center;
+
+                a:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px){
+
+    #features{
+        .buttons{
+            max-width: 310px;
+            flex-direction: column;
+            border-top: 2px solid $grayishBlue;
+            border-bottom: none;
+
+            button{
+                border-bottom: 2px solid $grayishBlue;
+            }
+        }
+    }
+
+    #pricing{
+        .cards{
+            .card{
+                margin: auto;
+    
+                &.card3{
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    
+    header{
+        padding: 40px 32px;
+    }
+
+    main{
+        .container{
+            padding: 0 32px;
+
+            .texts{
+                h1{
+                    font-size: 3rem;
+                }
+
+                .buttons{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 15px;
+
+                    button{
+                        width: 100%;
+                        padding: 0 5px;
+                    }
+
+                    button:first-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #features{
+        padding: 0 32px;
+        
+        p{
+            margin: 24px 0 45px 0;
+        }
+    }
+
+    #pricing{
+        padding: 0 32px;
+        margin-bottom: 145px;
+
+        p{
+            margin: 24px 0 45px 0;
+        }
+    }
+
+    #askedQuestions{
+        margin-bottom: 122px;
+        padding: 0 32px;
+
+        p{
+            margin: 28px 0 52px 0;
+        }
+
+        .questions{
+            button{
+                height: 60px;
+            }
+        }
+    }
+
+    #contact{
+        .container{
+            padding: 0 32px;
+
+            h2{
+                margin: 18px 0 32px 0;
+            }
+
+            .inputs{
+                flex-direction: column;
+
+                input[type="email"]{
+                    flex: none;
+                    margin-right: 0;
+                }
+                input[type="submit"]{
+                    margin-top: 15px;
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+
+    footer{
+        .box{
+            padding: 30px 32px;
+        }
+
+        .attribution{
+            padding: 10px 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    p{
+        font-size: 1.6rem;
+    }
+
+    main{
+        .container{
+            .texts{
+                h1{
+                    font-size: 2.8rem;
+                }
+            }
+
+            .image{
+                .image-content{
+                    .image-box{
+                        img{
+                            border: 11px solid $borderImage;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 340px){
+    header{
+        padding: 40px 28px;
+    }
+
+    main{
+        .container{
+            padding: 0 28px;
+
+            .texts{
+                h1{
+                    font-size: 2.7rem;
+                }
+            }
+        }
+    }
+
+    #features{
+        padding: 0 28px;
+    }
+
+    #pricing{
+        padding: 0 28px;
+    }
+
+    #askedQuestions{
+        padding: 0 28px;
+    }
+
+    #contact{
+        .container{
+            padding: 0 28px;
+        }
+    }
+
+    footer{
+        .box{
+            padding: 30px 28px;
+        }
+
+        .attribution{
+            padding: 10px 28px;
         }
     }
 }

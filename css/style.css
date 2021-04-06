@@ -13,7 +13,7 @@
   /* 10px */
 }
 
-body {
+html, body {
   font-size: 1.8rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -77,7 +77,7 @@ header .logo {
           align-items: center;
 }
 
-header ul {
+header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,7 +86,7 @@ header ul {
           align-items: center;
 }
 
-header ul li {
+header nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,23 +96,31 @@ header ul li {
   list-style: none;
 }
 
-header ul li a, header ul li button {
+header nav ul li a, header nav ul li button {
   letter-spacing: 1px;
   font-size: 1.4rem;
 }
 
-header ul li a {
+header nav ul li a {
   text-decoration: none;
   margin-right: 48px;
   color: #252b46;
 }
 
-header ul li button {
+header nav ul li button {
   width: 112px;
   height: 40px;
   font-weight: 400;
   color: #ffffff;
   background-color: #fa5757;
+}
+
+header #menuButton {
+  display: none;
+}
+
+header .socials {
+  display: none;
 }
 
 main {
@@ -449,6 +457,7 @@ main .container .image .image-content::before {
 #contact .container {
   max-width: 1440px;
   padding: 0 165px;
+  margin: auto;
 }
 
 #contact .container p, #contact .container h2 {
@@ -510,6 +519,8 @@ footer .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -558,10 +569,15 @@ footer .box .socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 24px;
+}
+
+footer .box .socials a img {
+  height: 24px;
 }
 
 footer .box .socials a:first-child {
-  margin-right: 28px;
+  margin: 0 28px;
 }
 
 footer .attribution {
@@ -699,9 +715,9 @@ footer .attribution a {
   }
   #features .container .texts {
     margin-top: 84px;
-    min-width: 530px;
+    max-width: 530px;
     width: 100%;
-    padding: 71px 0 57px 0;
+    padding: 71px 0 0 0;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -713,6 +729,347 @@ footer .attribution a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  #askedQuestions .questions {
+    max-width: 530px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header {
+    padding: 40px 5%;
+  }
+  header nav {
+    display: none;
+  }
+  header #menuButton {
+    height: 25px;
+    display: block;
+    background-color: transparent;
+  }
+  header #menuButton img {
+    height: 100%;
+  }
+  header.active-menu {
+    display: -ms-grid;
+    display: grid;
+    gap: 40px;
+        grid-template-areas: "logo menuButton" "nav nav" "socials socials";
+    -ms-grid-columns: 1fr 25px;
+        grid-template-columns: 1fr 25px;
+    -ms-grid-rows: min-content min-content 1fr;
+        grid-template-rows: -webkit-min-content -webkit-min-content 1fr;
+        grid-template-rows: min-content min-content 1fr;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: #252b46f2;
+  }
+  header.active-menu .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+  }
+  header.active-menu #menuButton {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: menuButton;
+  }
+  header.active-menu nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: nav;
+    display: block;
+  }
+  header.active-menu nav ul {
+    max-width: 530px;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top: 1px solid #808080;
+  }
+  header.active-menu nav ul li {
+    width: 100%;
+  }
+  header.active-menu nav ul li a {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 65px;
+    margin: 0;
+    color: #ffffff;
+    border-bottom: 1px solid #808080;
+  }
+  header.active-menu nav ul li button {
+    margin-top: 25px;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+  }
+  header.active-menu .socials {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: socials;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: auto;
+    margin-bottom: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  header.active-menu .socials a img {
+    display: block;
+    height: 24px;
+  }
+  main {
+    margin: 40px auto 104px auto;
+  }
+  main .container .texts {
+    padding-bottom: 0;
+  }
+  main .container .texts h1 {
+    max-width: 375px;
+    font-size: 3.2rem;
+  }
+  main .container .texts p {
+    margin-top: 24px;
+  }
+  #features {
+    margin: 0 auto 155px auto;
+  }
+  #features p {
+    margin: 24px auto 45px auto;
+  }
+  #features .buttons button {
+    height: 58px;
+  }
+  #features .container .texts {
+    padding-bottom: 0;
+  }
+  #pricing .cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  #pricing .cards .card {
+    margin: 0;
+  }
+  #pricing .cards .card.card2 {
+    margin: auto;
+  }
+  #pricing .cards .card.card3 {
+    margin: 0 0 0 auto;
+  }
+  #askedQuestions > button {
+    margin-top: 45px;
+    margin-bottom: 0;
+  }
+  #pricing,
+  #askedQuestions {
+    margin-bottom: 155px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #contact .container h2 {
+    margin-top: 20px;
+    margin-bottom: 38px;
+  }
+  footer .box {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  footer .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .box .left-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .box .left-box img {
+    margin-bottom: 40px;
+  }
+  footer .box .left-box nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .box .left-box nav ul li a {
+    margin: 0 0 37px 0;
+  }
+  footer .box .socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .box .socials a:first-child {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  #features .buttons {
+    max-width: 310px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top: 2px solid #9194a1;
+    border-bottom: none;
+  }
+  #features .buttons button {
+    border-bottom: 2px solid #9194a1;
+  }
+  #pricing .cards .card {
+    margin: auto;
+  }
+  #pricing .cards .card.card3 {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header {
+    padding: 40px 32px;
+  }
+  main .container {
+    padding: 0 32px;
+  }
+  main .container .texts h1 {
+    font-size: 3rem;
+  }
+  main .container .texts .buttons {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  main .container .texts .buttons button {
+    width: 100%;
+    padding: 0 5px;
+  }
+  main .container .texts .buttons button:first-child {
+    margin-right: 0;
+  }
+  #features {
+    padding: 0 32px;
+  }
+  #features p {
+    margin: 24px 0 45px 0;
+  }
+  #pricing {
+    padding: 0 32px;
+    margin-bottom: 145px;
+  }
+  #pricing p {
+    margin: 24px 0 45px 0;
+  }
+  #askedQuestions {
+    margin-bottom: 122px;
+    padding: 0 32px;
+  }
+  #askedQuestions p {
+    margin: 28px 0 52px 0;
+  }
+  #askedQuestions .questions button {
+    height: 60px;
+  }
+  #contact .container {
+    padding: 0 32px;
+  }
+  #contact .container h2 {
+    margin: 18px 0 32px 0;
+  }
+  #contact .container .inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact .container .inputs input[type="email"] {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin-right: 0;
+  }
+  #contact .container .inputs input[type="submit"] {
+    margin-top: 15px;
+    min-width: 100%;
+  }
+  footer .box {
+    padding: 30px 32px;
+  }
+  footer .attribution {
+    padding: 10px 32px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  p {
+    font-size: 1.6rem;
+  }
+  main .container .texts h1 {
+    font-size: 2.8rem;
+  }
+  main .container .image .image-content .image-box img {
+    border: 11px solid #242223;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  header {
+    padding: 40px 28px;
+  }
+  main .container {
+    padding: 0 28px;
+  }
+  main .container .texts h1 {
+    font-size: 2.7rem;
+  }
+  #features {
+    padding: 0 28px;
+  }
+  #pricing {
+    padding: 0 28px;
+  }
+  #askedQuestions {
+    padding: 0 28px;
+  }
+  #contact .container {
+    padding: 0 28px;
+  }
+  footer .box {
+    padding: 30px 28px;
+  }
+  footer .attribution {
+    padding: 10px 28px;
   }
 }
 

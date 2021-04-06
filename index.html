@@ -4,13 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Bookmark landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -21,6 +19,8 @@
     <div class="logo">
       <img src="./images/logo-bookmark.svg" alt="logo">
     </div>
+    
+    <button id="menuButton"><img src="./images/icon-hamburger.svg" alt="menu" /></button>
 
     <nav>
       <ul>
@@ -30,6 +30,11 @@
         <li><button>LOGIN</button></li>
       </ul>
     </nav>
+
+    <div class="socials">
+      <a href="#"><img src="./images/icon-facebook.svg" /></a>
+      <a href="#"><img src="./images/icon-twitter.svg" /></a>
+    </div>
 
   </header>
 
@@ -203,10 +208,10 @@
 
       <h2>Stay up-to-date with what we’re doing</h2>
 
-      <div class="inputs">
-        <input type="email" placeholder="Enter your email address" />
+      <form class="inputs">
+        <input type="email" placeholder="Enter your email address" required/>
         <input type="submit" value="Contact Us" />
-      </div>
+      </form>
 
     </div>
   </section>

@@ -3,6 +3,7 @@ footer{
 
     .box{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         max-width: 1440px;
         margin: auto;
@@ -34,9 +35,16 @@ footer{
 
         .socials{
             display: flex;
+            height: 24px;
+
+            a{
+                img{
+                    height: 24px;
+                }
+            }
 
             a:first-child{
-                margin-right: 28px;
+                margin: 0 28px;
             }
         }
     }

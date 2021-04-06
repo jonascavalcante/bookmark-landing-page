@@ -11,33 +11,43 @@ header{
         display: flex;
         align-items: center;
     }
-    
-    ul{
-        display: flex;
-        align-items: center;
-        
-        li{
+
+    nav{    
+        ul{
             display: flex;
             align-items: center;
-            list-style: none;
             
-            a, button{
-                letter-spacing: 1px;
-                font-size: 1.4rem;
-            }
+            li{
+                display: flex;
+                align-items: center;
+                list-style: none;
+                
+                a, button{
+                    letter-spacing: 1px;
+                    font-size: 1.4rem;
+                }
 
-            a{
-                text-decoration: none;
-                margin-right: 48px;
-                color: $veryDarkBlue;
-            }
-            button{
-                width: 112px;
-                height: 40px;
-                font-weight: 400;
-                color: $white;
-                background-color: $red;
+                a{
+                    text-decoration: none;
+                    margin-right: 48px;
+                    color: $veryDarkBlue;
+                }
+                button{
+                    width: 112px;
+                    height: 40px;
+                    font-weight: 400;
+                    color: $white;
+                    background-color: $red;
+                }
             }
         }
+    }
+
+    #menuButton{
+        display: none;
+    }
+
+    .socials{
+        display: none;
     }
 }
