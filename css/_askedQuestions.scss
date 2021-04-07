@@ -30,8 +30,16 @@
             align-items: center;
             justify-content: space-between;
 
+            &:hover{
+                color: $red;
+            }
+
             img{
                 margin-right: 4.074%;
+
+                &.active{
+                    transform: rotate(180deg);
+                }
             }
         }
     

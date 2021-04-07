@@ -430,8 +430,17 @@ main .container .image .image-content::before {
           justify-content: space-between;
 }
 
+#askedQuestions .questions button:hover {
+  color: #fa5757;
+}
+
 #askedQuestions .questions button img {
   margin-right: 4.074%;
+}
+
+#askedQuestions .questions button img.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 #askedQuestions .questions p {

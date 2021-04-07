@@ -51,34 +51,38 @@ document.querySelectorAll('#features .buttons button').forEach(e => {
 
 //-----------------FEATURES-----------------//
 
+
 //-----------------ASKED QUESTIONS-----------------//
 
 let questions = document.querySelectorAll('#askedQuestions .questions button');
 
-
-
 questions.forEach(button => {
     
     button.addEventListener('click', () => {
-
+        
         let buttonId = button.id;
         let numberId = buttonId.charAt(buttonId.length - 1);
-        let answers = document.querySelectorAll('.questions p');
         
-        answers.forEach(element => {
-            
-            if (element.id == `answer${numberId}`) {
-                element.classList.toggle('active');
-            }
-        });
-    
-        //let answer = document.querySelector(`#answer${numberId}`);
+        let answers = document.querySelectorAll('.questions p');
+            answers.forEach(p => p.id == `answer${numberId}` ? p.classList.toggle('active') : false);
 
-        //answer.classList.toggle('active');
-
-        //console.log(answer);
-
+        let images = document.querySelectorAll('.questions button img');
+            images.forEach(img => {
+                
+                let srcImage = img.attributes.src.value;
+                            
+                if(img.id == `arrow${numberId}`) {
+                
+                    img.classList.toggle('active');
+                    
+                    if (srcImage == './images/icon-arrow.svg') {
+                        img.src = './images/icon-arrow-red.svg';
+                    } else {
+                        img.src = './images/icon-arrow.svg';
+                    }
+                }
+            });
     });
-    
-
 });
+
+//-----------------ASKED QUESTIONS-----------------//
