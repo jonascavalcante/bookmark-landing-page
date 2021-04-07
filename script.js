@@ -1,3 +1,30 @@
+//-----------------HEADER-----------------//
+
+let menuButton = document.querySelector('#menuButton');
+let menuButtonImage = document.querySelector('#menuButton img');
+let activeMenu = document.querySelector('header');
+let imageLogo = document.querySelector('header .logo img');
+
+menuButton.addEventListener('click', () => {
+    
+    activeMenu.classList.toggle('active-menu');
+
+    let menuButtonImageSrc = menuButtonImage.attributes.src.value;
+
+    if (menuButtonImageSrc == './images/icon-hamburger.svg') {
+        menuButtonImage.src = './images/icon-close.svg';
+        imageLogo.src = './images/logo-bookmark-white.svg';
+    } else {
+        menuButtonImage.src = './images/icon-hamburger.svg';
+        imageLogo.src = './images/logo-bookmark.svg';
+    }
+})
+
+//-----------------HEADER-----------------//
+
+
+//-----------------FEATURES-----------------//
+
 const features = {
     sb: {
         img: './images/illustration-features-tab-1.svg',
