@@ -25,16 +25,23 @@ main{
                 margin: 28px 0 35px 0;
                 color: $grayishBlue;
             }
+
             button{
                 height: 48px;
-
-                &.gray {
-                    box-shadow: 0 2px 5px $shadowButton;
+                
+                &:first-child{
+                    margin-right: 15px;
+                    
+                    &:hover{
+                        color: $blue;
+                    }
                 }
-            }
-    
-            button:first-child{
-                margin-right: 15px;
+                
+                &:hover{
+                    background-color: $white;
+                    border: 2px solid;
+                    transition: 0.2s;
+                }
             }
         }
 

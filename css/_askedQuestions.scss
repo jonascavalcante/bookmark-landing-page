@@ -22,27 +22,28 @@
             text-align: left;
             font-size: 1.6rem;
             font-weight: 400;
-
+            
             color: $veryDarkBlue;
             background-color: transparent;
-
+            
             display: flex;
             align-items: center;
             justify-content: space-between;
-
+            
             &:hover{
                 color: $red;
+                transition: 0.2s;
             }
-
+            
             img{
                 margin-right: 4.074%;
-
+                
                 &.active{
                     transform: rotate(180deg);
                 }
             }
         }
-    
+        
         p{
             display: none;
             font-weight: 400;

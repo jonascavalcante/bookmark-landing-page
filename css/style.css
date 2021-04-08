@@ -35,11 +35,15 @@ button.blue {
   height: 48px;
   color: #ffffff;
   background-color: #5368df;
+  -webkit-box-shadow: 0 12px 10px -10px #cccccc;
+          box-shadow: 0 12px 10px -10px #cccccc;
 }
 
 button.gray {
   color: #808080;
   background-color: #F7F7F7;
+  -webkit-box-shadow: 0 12px 10px -10px #cccccc;
+          box-shadow: 0 12px 10px -10px #cccccc;
 }
 
 h2 {
@@ -101,6 +105,12 @@ header nav ul li a, header nav ul li button {
   font-size: 1.4rem;
 }
 
+header nav ul li a:hover, header nav ul li a:hover, header nav ul li button:hover, header nav ul li button:hover {
+  color: #fa5757;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 header nav ul li a {
   text-decoration: none;
   margin-right: 48px;
@@ -113,6 +123,13 @@ header nav ul li button {
   font-weight: 400;
   color: #ffffff;
   background-color: #fa5757;
+  -webkit-box-shadow: 0 10px 8px -8px #cccccc;
+          box-shadow: 0 10px 8px -8px #cccccc;
+}
+
+header nav ul li button:hover {
+  background-color: #ffffff;
+  border: 2px solid #fa5757;
 }
 
 header #menuButton {
@@ -167,13 +184,19 @@ main .container .texts button {
   height: 48px;
 }
 
-main .container .texts button.gray {
-  -webkit-box-shadow: 0 2px 5px #cccccc;
-          box-shadow: 0 2px 5px #cccccc;
-}
-
 main .container .texts button:first-child {
   margin-right: 15px;
+}
+
+main .container .texts button:first-child:hover {
+  color: #5368df;
+}
+
+main .container .texts button:hover {
+  background-color: #ffffff;
+  border: 2px solid;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 main .container .image {
@@ -256,8 +279,12 @@ main .container .image .image-content::before {
 }
 
 #features .buttons button.active {
-  color: #252b46;
   border-bottom: 4px solid #fa5757;
+}
+
+#features .buttons button:hover {
+  color: #252b46;
+  color: #fa5757;
 }
 
 #features .container {
@@ -389,6 +416,14 @@ main .container .image .image-content::before {
   margin: 24px 24px;
 }
 
+#pricing .cards .card button:hover {
+  color: #5368df;
+  background-color: #ffffff;
+  border: 2px solid;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 #pricing .cards .card.card2 {
   margin-top: 40px;
 }
@@ -438,6 +473,8 @@ main .container .image .image-content::before {
 
 #askedQuestions .questions button:hover {
   color: #fa5757;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 #askedQuestions .questions button img {
@@ -507,6 +544,8 @@ main .container .image .image-content::before {
   border-radius: 5px;
   border: transparent;
   padding: 0 24px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 #contact .container .inputs input[type="email"] {
@@ -524,6 +563,12 @@ main .container .image .image-content::before {
   color: #F7F7F7;
   background-color: #fa5757;
   cursor: pointer;
+}
+
+#contact .container .inputs input[type="submit"]:hover {
+  border: 2px solid;
+  color: #fa5757;
+  background-color: #ffffff;
 }
 
 footer {
@@ -578,6 +623,12 @@ footer .box .left-box ul li a {
   text-decoration: none;
   margin-left: 48px;
   color: #ffffff;
+}
+
+footer .box .left-box ul li a:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #fa5757;
 }
 
 footer .box .socials {
@@ -832,6 +883,11 @@ footer .attribution a {
     width: 100%;
     background-color: transparent;
     border: 2px solid #ffffff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  header.active-menu nav ul li button:hover {
+    color: #ffffff;
   }
   header.active-menu .socials {
     -ms-grid-row: 3;

@@ -260,6 +260,11 @@
                             width: 100%;
                             background-color: transparent;
                             border: 2px solid $white;
+                            box-shadow: none;
+
+                            &:hover {
+                                color: $white;
+                            }
                         }
                     }
                 }

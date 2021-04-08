@@ -45,10 +45,12 @@ button{
         height: 48px;
         color: $white;
         background-color: $blue;
+        box-shadow: 0 12px 10px -10px $shadowButton;
     }
     &.gray{
         color: $gray;
         background-color: $grayLight;
+        box-shadow: 0 12px 10px -10px $shadowButton;
     }
 }
 

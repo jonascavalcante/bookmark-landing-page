@@ -28,6 +28,11 @@ footer{
                         text-decoration: none;
                         margin-left: 48px;
                         color: $white;
+                        
+                        &:hover {
+                            transition: 0.2s;
+                            color: $red;
+                        }
                     }
                 }
             }

@@ -36,6 +36,7 @@
                 border-radius: 5px;
                 border: transparent;
                 padding: 0 24px;
+                transition: 0.2s;
     
                 &[type="email"]{
                     flex: 1;
@@ -50,6 +51,12 @@
                     color: $grayLight;
                     background-color: $red;
                     cursor: pointer;
+
+                    &:hover {
+                        border: 2px solid;
+                        color: $red;
+                        background-color: $white;
+                    }
                 }
             }
         }
