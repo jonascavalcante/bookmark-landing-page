@@ -13,6 +13,12 @@ footer{
             display: flex;
             align-items: center;
             
+            svg {
+                path{
+                    fill: $white;
+                }
+            }
+
             ul{
                 display: flex;
                 align-items: center;
@@ -37,14 +43,16 @@ footer{
                 }
             }
         }
-
         .socials{
             display: flex;
             height: 24px;
 
             a{
-                img{
-                    height: 24px;
+                &:hover svg{
+                    path{
+                        transition: 0.2s;
+                        fill: $red;
+                    }
                 }
             }
 

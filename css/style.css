@@ -598,6 +598,10 @@ footer .box .left-box {
           align-items: center;
 }
 
+footer .box .left-box svg path {
+  fill: #ffffff;
+}
+
 footer .box .left-box ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -638,8 +642,10 @@ footer .box .socials {
   height: 24px;
 }
 
-footer .box .socials a img {
-  height: 24px;
+footer .box .socials a:hover svg path {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  fill: #fa5757;
 }
 
 footer .box .socials a:first-child {
