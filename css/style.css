@@ -136,6 +136,10 @@ header #menuButton {
   display: none;
 }
 
+header #menuButton #close {
+  display: none;
+}
+
 header .socials {
   display: none;
 }
@@ -844,10 +848,25 @@ footer .attribution a {
     -ms-grid-column: 1;
     grid-area: logo;
   }
+  header.active-menu .logo svg g path {
+    fill: #ffffff;
+  }
+  header.active-menu .logo svg g g circle {
+    fill: #ffffff;
+  }
+  header.active-menu .logo svg g g path {
+    fill: #252b46;
+  }
   header.active-menu #menuButton {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: menuButton;
+  }
+  header.active-menu #menuButton #hamburger {
+    display: none;
+  }
+  header.active-menu #menuButton #close {
+    display: block;
   }
   header.active-menu nav {
     -ms-grid-row: 2;
@@ -987,7 +1006,7 @@ footer .attribution a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  footer .box .left-box img {
+  footer .box .left-box svg {
     margin-bottom: 40px;
   }
   footer .box .left-box nav ul {

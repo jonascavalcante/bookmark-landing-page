@@ -225,10 +225,36 @@
             
             .logo{
                 grid-area: logo;
+
+                svg{
+                    g{
+                        path{
+                            fill: $white;
+                        }
+    
+                        g{
+                            circle{
+                                fill: $white;
+                            }
+                            path{
+                                fill: $veryDarkBlue;
+                            }
+                        }
+
+                    }
+                }
             }
 
             #menuButton {
                 grid-area: menuButton;
+
+                #hamburger{
+                    display: none;
+                }
+
+                #close{
+                    display: block;
+                }
             }
 
             nav{
@@ -388,7 +414,7 @@
             .left-box{
                 flex-direction: column;
 
-                img{
+                svg{
                     margin-bottom: 40px;
                 }
 
