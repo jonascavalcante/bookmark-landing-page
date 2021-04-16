@@ -538,9 +538,42 @@ main .container .image .image-content::before {
 #contact .container .inputs {
   max-width: 442px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 0 15px;
+      grid-template-areas: "email submit";
+}
+
+#contact .container .inputs .email {
+  position: relative;
+}
+
+#contact .container .inputs .email input {
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: email;
+  border: 2px solid #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+#contact .container .inputs .email input.error {
+  border: 2px solid #fa5757;
+}
+
+#contact .container .inputs .email img {
+  display: none;
+}
+
+#contact .container .inputs .email img.error {
+  display: block;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  z-index: 1;
 }
 
 #contact .container .inputs input {
@@ -552,27 +585,40 @@ main .container .image .image-content::before {
   transition: 0.2s;
 }
 
-#contact .container .inputs input[type="email"] {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 15px;
-}
-
 #contact .container .inputs input[type="submit"] {
   display: block;
   width: 100%;
-  max-width: 126px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: submit;
+  max-width: 127px;
   font-weight: 500;
   color: #F7F7F7;
   background-color: #fa5757;
   cursor: pointer;
+  border: 2px solid #fa5757;
 }
 
 #contact .container .inputs input[type="submit"]:hover {
-  border: 2px solid;
   color: #fa5757;
   background-color: #ffffff;
+}
+
+#contact .container .inputs span {
+  display: none;
+  margin-top: -4px;
+  grid-area: error;
+  padding: 5px 10px 2px 10px;
+  font-size: 1.2rem;
+  font-style: italic;
+  border-radius: 0 0 5px 5px;
+  border: 2px solid #fa5757;
+  color: #ffffff;
+  background-color: #fa5757;
+}
+
+#contact .container .inputs span.active {
+  display: block;
 }
 
 footer {
@@ -1104,19 +1150,10 @@ footer .attribution a {
     margin: 18px 0 32px 0;
   }
   #contact .container .inputs {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #contact .container .inputs input[type="email"] {
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
-    margin-right: 0;
+    gap: 15px 0;
+        grid-template-areas: "email" "submit";
   }
   #contact .container .inputs input[type="submit"] {
-    margin-top: 15px;
     min-width: 100%;
   }
   footer .box {

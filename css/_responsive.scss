@@ -545,14 +545,13 @@
             }
 
             .inputs{
-                flex-direction: column;
+                gap: 15px 0;
+                grid-template-areas: 
+                    "email"
+                    "submit"
+                ;
 
-                input[type="email"]{
-                    flex: none;
-                    margin-right: 0;
-                }
                 input[type="submit"]{
-                    margin-top: 15px;
                     min-width: 100%;
                 }
             }

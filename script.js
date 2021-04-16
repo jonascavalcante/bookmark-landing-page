@@ -100,3 +100,71 @@ questions.forEach(button => {
 });
 
 //-----------------ASKED QUESTIONS-----------------//
+
+
+//-----------------CONTATO-----------------//
+
+const field = document.querySelector('[required]');
+
+//console.log(field);
+
+function customValidation(event) {
+    
+    event.preventDefault();
+    
+    let field = event.target;
+
+    //VERIFICANDO SE EXISTEM ERROS
+    function verifyErrors() {
+
+        let foundError = false;
+
+        for(let error in field.validity) {
+
+            if (field.validity[error] && !field.validity.valid) {
+                foundError = error;
+            }
+        }
+
+        return foundError;
+    }
+    
+    const error = verifyErrors();
+    
+    const inputError = field.parentNode.querySelector('input');
+    const imageError = field.parentNode.querySelector('img');
+    const spanError = field.parentNode.querySelector('span');
+
+    if (error) {
+        
+        inputError.classList.add('error');
+        imageError.classList.add('error');
+        
+        spanError.classList.add('active');
+        spanError.innerHTML = "Whoops, make sure it's an email";
+    
+    }else{
+        
+        inputError.classList.remove('error');
+        imageError.classList.remove('error');
+        
+        spanError.classList.remove('active');
+        spanError.innerHTML = "";
+    }
+    
+}
+
+field.addEventListener('invalid', customValidation);
+field.addEventListener('blur', customValidation);
+
+//DESATIVANDO O ENVIO
+document.querySelector('form')
+.addEventListener('submit', event => {
+    
+    console.log('Enviado');
+    
+    event.preventDefault();
+    
+})
+
+//-----------------CONTATO-----------------//
