@@ -58,8 +58,16 @@ p {
 }
 
 header {
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 1;
+}
+
+header .container {
+  width: 100%;
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto;
   padding: 48px 165px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,7 +80,7 @@ header {
           justify-content: space-between;
 }
 
-header .logo {
+header .container .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,7 +89,7 @@ header .logo {
           align-items: center;
 }
 
-header nav ul {
+header .container nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +98,7 @@ header nav ul {
           align-items: center;
 }
 
-header nav ul li {
+header .container nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,24 +108,24 @@ header nav ul li {
   list-style: none;
 }
 
-header nav ul li a, header nav ul li button {
+header .container nav ul li a, header .container nav ul li button {
   letter-spacing: 1px;
   font-size: 1.4rem;
 }
 
-header nav ul li a:hover, header nav ul li a:hover, header nav ul li button:hover, header nav ul li button:hover {
+header .container nav ul li a:hover, header .container nav ul li a:hover, header .container nav ul li button:hover, header .container nav ul li button:hover {
   color: #fa5757;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-header nav ul li a {
+header .container nav ul li a {
   text-decoration: none;
   margin-right: 48px;
   color: #252b46;
 }
 
-header nav ul li button {
+header .container nav ul li button {
   width: 112px;
   height: 40px;
   font-weight: 400;
@@ -127,25 +135,25 @@ header nav ul li button {
           box-shadow: 0 10px 8px -8px #cccccc;
 }
 
-header nav ul li button:hover {
+header .container nav ul li button:hover {
   background-color: #ffffff;
   border: 2px solid #fa5757;
 }
 
-header #menuButton {
+header .container #menuButton {
   display: none;
 }
 
-header #menuButton #close {
+header .container #menuButton #close {
   display: none;
 }
 
-header .socials {
+header .container .socials {
   display: none;
 }
 
 main {
-  margin: 68px auto 195px auto;
+  margin: 204px auto 195px auto;
 }
 
 main .container {
@@ -718,11 +726,11 @@ footer .attribution a {
 }
 
 @media screen and (max-width: 1440px) {
-  header {
+  header .container {
     padding: 3.33% 11.458%;
   }
   main {
-    margin: 4.72% auto 13.542% auto;
+    margin: 13% auto 13.542% auto;
   }
   main .container {
     gap: 7.22%;
@@ -766,7 +774,7 @@ footer .attribution a {
 }
 
 @media screen and (max-width: 1075px) {
-  header {
+  header .container {
     padding: 3.33% 5%;
   }
   main .container {
@@ -858,21 +866,21 @@ footer .attribution a {
 }
 
 @media screen and (max-width: 850px) {
-  header {
+  header .container {
     padding: 40px 5%;
   }
-  header nav {
+  header .container nav {
     display: none;
   }
-  header #menuButton {
+  header .container #menuButton {
     height: 25px;
     display: block;
     background-color: transparent;
   }
-  header #menuButton img {
+  header .container #menuButton img {
     height: 100%;
   }
-  header.active-menu {
+  header .container.active-menu {
     display: -ms-grid;
     display: grid;
     gap: 40px;
@@ -884,44 +892,44 @@ footer .attribution a {
         grid-template-rows: min-content min-content 1fr;
     width: 100%;
     min-height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: #252b46f2;
   }
-  header.active-menu .logo {
+  header .container.active-menu .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header.active-menu .logo svg g path {
+  header .container.active-menu .logo svg g path {
     fill: #ffffff;
   }
-  header.active-menu .logo svg g g circle {
+  header .container.active-menu .logo svg g g circle {
     fill: #ffffff;
   }
-  header.active-menu .logo svg g g path {
+  header .container.active-menu .logo svg g g path {
     fill: #252b46;
   }
-  header.active-menu #menuButton {
+  header .container.active-menu #menuButton {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: menuButton;
   }
-  header.active-menu #menuButton #hamburger {
+  header .container.active-menu #menuButton #hamburger {
     display: none;
   }
-  header.active-menu #menuButton #close {
+  header .container.active-menu #menuButton #close {
     display: block;
   }
-  header.active-menu nav {
+  header .container.active-menu nav {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: nav;
     display: block;
   }
-  header.active-menu nav ul {
+  header .container.active-menu nav ul {
     max-width: 530px;
     margin: 0 auto;
     -webkit-box-orient: vertical;
@@ -930,10 +938,10 @@ footer .attribution a {
             flex-direction: column;
     border-top: 1px solid #808080;
   }
-  header.active-menu nav ul li {
+  header .container.active-menu nav ul li {
     width: 100%;
   }
-  header.active-menu nav ul li a {
+  header .container.active-menu nav ul li a {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -949,7 +957,7 @@ footer .attribution a {
     color: #ffffff;
     border-bottom: 1px solid #808080;
   }
-  header.active-menu nav ul li button {
+  header .container.active-menu nav ul li button {
     margin-top: 25px;
     width: 100%;
     background-color: transparent;
@@ -957,10 +965,10 @@ footer .attribution a {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  header.active-menu nav ul li button:hover {
+  header .container.active-menu nav ul li button:hover {
     color: #ffffff;
   }
-  header.active-menu .socials {
+  header .container.active-menu .socials {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -976,12 +984,12 @@ footer .attribution a {
         grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-  header.active-menu .socials a img {
+  header .container.active-menu .socials a img {
     display: block;
     height: 24px;
   }
   main {
-    margin: 40px auto 104px auto;
+    margin: 145px auto 104px auto;
   }
   main .container .texts {
     padding-bottom: 0;
@@ -1096,8 +1104,11 @@ footer .attribution a {
 }
 
 @media screen and (max-width: 425px) {
-  header {
+  header .container {
     padding: 40px 32px;
+  }
+  main {
+    margin: 110px auto 104px auto;
   }
   main .container {
     padding: 0 32px;
@@ -1177,7 +1188,7 @@ footer .attribution a {
 }
 
 @media screen and (max-width: 340px) {
-  header {
+  header .container {
     padding: 40px 28px;
   }
   main .container {

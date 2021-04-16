@@ -1,7 +1,7 @@
 //-----------------HEADER-----------------//
 
 let menuButton = document.querySelector('#menuButton');
-let activeMenu = document.querySelector('header');
+let activeMenu = document.querySelector('header .container');
 
 menuButton.addEventListener('click', () => {
     activeMenu.classList.toggle('active-menu');

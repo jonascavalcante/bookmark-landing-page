@@ -1,13 +1,15 @@
 @media screen and (max-width: 1440px){
 
     header{
-        //padding: 48px 165px;
-        padding: 3.33% 11.458%;
+        .container{
+            //padding: 48px 165px;
+            padding: 3.33% 11.458%;
+        }
     }
 
     main{
         //margin: 68px auto 195px auto;
-        margin: 4.72% auto 13.542% auto;
+        margin: 13% auto 13.542% auto;
 
         .container{
             //gap: 104px;
@@ -83,7 +85,9 @@
 @media screen and (max-width: 1075px){
 
     header{
-        padding: 3.33% 5%;
+        .container {
+            padding: 3.33% 5%;
+        }
     }
 
     main{
@@ -188,141 +192,142 @@
 @media screen and (max-width: 850px){
 
     header{
-        padding: 40px 5%;
-
-        nav{
-            display: none;
-        }
-
-        #menuButton{
-            height: 25px;
-            display: block;
-            background-color: transparent;
+        .container{
+            padding: 40px 5%;
             
-            img{
-                height: 100%;
+            nav{
+                display: none;
             }
-        }
-
-        &.active-menu{
-            display: grid;
-            gap: 40px;
-            grid-template-areas:
-                "logo menuButton"
-                "nav nav"
-                "socials socials"
-            ;       
-            grid-template-columns: 1fr 25px;     
-            grid-template-rows: min-content min-content 1fr;
-
-            width: 100%;
-            min-height: 100%;
-            position: absolute;
-            top: 0;
-            z-index: 1;
-
-            background-color: $backMenu; 
             
-            .logo{
-                grid-area: logo;
+            #menuButton{
+                height: 25px;
+                display: block;
+                background-color: transparent;
+                
+                img{
+                    height: 100%;
+                }
+            }
+            
+            &.active-menu{
+                display: grid;
+                gap: 40px;
+                grid-template-areas:
+                "logo menuButton"
+                    "nav nav"
+                    "socials socials"
+                    ;       
+                grid-template-columns: 1fr 25px;     
+                grid-template-rows: min-content min-content 1fr;
+                
+                width: 100%;
+                min-height: 100%;
+                position: fixed;
+                top: 0;
+                z-index: 2;
 
-                svg{
-                    g{
-                        path{
-                            fill: $white;
-                        }
-    
+                background-color: $backMenu; 
+                
+                .logo{
+                    grid-area: logo;
+                    
+                    svg{
                         g{
-                            circle{
+                            path{
                                 fill: $white;
                             }
-                            path{
-                                fill: $veryDarkBlue;
+                            
+                            g{
+                                circle{
+                                    fill: $white;
+                                }
+                                path{
+                                    fill: $veryDarkBlue;
+                                }
                             }
-                        }
 
+                        }
                     }
                 }
-            }
 
-            #menuButton {
-                grid-area: menuButton;
-
-                #hamburger{
-                    display: none;
-                }
-
-                #close{
-                    display: block;
-                }
-            }
-
-            nav{
-                grid-area: nav;
-                display: block;
-                
-                ul{
-                    max-width: 530px;
-                    margin: 0 auto;
-                    flex-direction: column;
-                    border-top: 1px solid $gray;
+                #menuButton {
+                    grid-area: menuButton;
                     
-                    li{
-                        width: 100%;
-
-                        a{
+                    #hamburger{
+                        display: none;
+                    }
+                    
+                    #close{
+                        display: block;
+                    }
+                }
+                
+                nav{
+                    grid-area: nav;
+                    display: block;
+                    
+                    ul{
+                        max-width: 530px;
+                        margin: 0 auto;
+                        flex-direction: column;
+                        border-top: 1px solid $gray;
+                        
+                        li{
                             width: 100%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            height: 65px;
-                            margin: 0;
-                            color: $white;
-                            border-bottom: 1px solid $gray;
-                        }
 
-                        button{
-                            margin-top: 25px;
-                            width: 100%;
-                            background-color: transparent;
-                            border: 2px solid $white;
-                            box-shadow: none;
-
-                            &:hover {
+                            a{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 65px;
+                                margin: 0;
                                 color: $white;
+                                border-bottom: 1px solid $gray;
+                            }
+                            
+                            button{
+                                margin-top: 25px;
+                                width: 100%;
+                                background-color: transparent;
+                                border: 2px solid $white;
+                                box-shadow: none;
+                                
+                                &:hover {
+                                    color: $white;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            .socials{
-                grid-area: socials;
-                width: min-content;
-                margin: auto;
-                margin-bottom: 0;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-
-                a{
-                    img{
-                        display: block;
-                        height: 24px;
+                .socials{
+                    grid-area: socials;
+                    width: min-content;
+                    margin: auto;
+                    margin-bottom: 0;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                    
+                    a{
+                        img{
+                            display: block;
+                            height: 24px;
+                        }
                     }
                 }
             }
         }
-
     }
-
+    
     main{
-        margin: 40px auto 104px auto;
-
+        margin: 145px auto 104px auto;
+        
         .container{
             .texts{
                 padding-bottom: 0;
-
+                
                 h1{
                     max-width: 375px;
                     font-size: 3.2rem;
@@ -473,10 +478,14 @@
 @media screen and (max-width: 425px){
     
     header{
-        padding: 40px 32px;
+        .container{
+            padding: 40px 32px;
+        }
     }
 
     main{
+        margin: 110px auto 104px auto;
+
         .container{
             padding: 0 32px;
 
@@ -598,7 +607,9 @@
 
 @media screen and (max-width: 340px){
     header{
-        padding: 40px 28px;
+        .container{
+            padding: 40px 28px;
+        }
     }
 
     main{
