@@ -178,6 +178,8 @@ menuItems.forEach(item => item.addEventListener('click', scrollToIdOnClick));
 menuItemsBottom.forEach(item => item.addEventListener('click', scrollToIdOnClick));
 
 function scrollToIdOnClick(event) {
+
+    activeMenu.classList.remove('active-menu');
     
     event.preventDefault();
 
