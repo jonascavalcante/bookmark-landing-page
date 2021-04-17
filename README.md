@@ -20,8 +20,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/jonascavalcante/bookmark-landing-page#the-challenge)
-- Live Site URL: [Add live site URL here](https://jonascavalcante.github.io/bookmark-landing-page/)
+- Live Site URL: [Link](https://jonascavalcante.github.io/bookmark-landing-page)
 
 ## My process
 
