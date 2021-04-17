@@ -172,10 +172,10 @@ document.querySelector('form')
 //----------------SCROLL-----------------//
 
 const menuItems = document.querySelectorAll('header nav a');
+const menuItemsBottom = document.querySelectorAll('footer nav a');
 
-menuItems.forEach(item => {
-    item.addEventListener('click', scrollToIdOnClick);
-})
+menuItems.forEach(item => item.addEventListener('click', scrollToIdOnClick));
+menuItemsBottom.forEach(item => item.addEventListener('click', scrollToIdOnClick));
 
 function scrollToIdOnClick(event) {
     
