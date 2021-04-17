@@ -168,3 +168,57 @@ document.querySelector('form')
 })
 
 //-----------------CONTATO-----------------//
+
+//----------------SCROLL-----------------//
+
+const menuItems = document.querySelectorAll('header nav a');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', scrollToIdOnClick);
+})
+
+function scrollToIdOnClick(event) {
+    
+    event.preventDefault();
+
+    let headerHeight = document.querySelector('header').offsetHeight;
+
+    let paddingEl = document.querySelector('#pricing');
+    let paddingElement = paddingEl.currentStyle || window.getComputedStyle(paddingEl);
+    let paddingElementP = parseInt(paddingElement.paddingTop);
+
+    const element = event.target;
+    const id = element.getAttribute('href');
+    const to = document.querySelector(id).offsetTop;
+
+    if (headerHeight > 94.9) {
+        
+        if(id == '#pricing'){
+            window.scroll({
+                top: to - headerHeight + paddingElementP,
+                behavior: 'smooth' 
+            });
+        } else {       
+            window.scroll({
+                top: to - headerHeight,
+                behavior: 'smooth' 
+            });
+        }
+        
+    } else {
+        
+        if(id == '#pricing'){
+            window.scroll({
+                top: to - 105 + paddingElementP,
+                behavior: 'smooth' 
+            });
+        } else {       
+            window.scroll({
+                top: to - 105,
+                behavior: 'smooth' 
+            });
+        }
+
+    }   
+
+} 
